@@ -7,12 +7,12 @@ from books.models import Book, Author, Publisher
 # TemplateView
 
 
-class BookModelView(TemplateView):
+class BooksModelView(TemplateView):
     template_name = 'books/index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['model_lsit'] = ['Book', 'Author', 'Publisher']
+        context['model_list'] = ['Book', 'Author', 'Publisher']
         return context
 
 # ListView
