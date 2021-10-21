@@ -137,12 +137,12 @@ LOGGING = {
             'class' : 'logging.FileHandler',
             'filename' : os.path.join(BASE_DIR, 'logs', 'kang_site.log'),
             'formatter' : 'verbose'
-        },
-        'loggers' : {
-            'polls' :{
-                'handlers' : ['file'],
-                'level' : 'DEBUG'
             }
+    },
+    'loggers' : {
+        'polls' :{
+            'handlers' : ['file'],
+            'level' : 'DEBUG'
         }
     }
 }
