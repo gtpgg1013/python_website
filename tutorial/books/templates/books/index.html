@@ -1,0 +1,17 @@
+{% extends 'base_books.html' %}
+
+{% block content %}
+  <h2>Books Management System</h2>
+  <h3>
+    <strong>
+      <a href="{% url 'books:make_record_view' %}">Make New Book Record!</a>
+    </strong>
+  </h3>
+  <ul>
+    {% for modelname in model_list%}
+      <li>{% with "books:"|add:modelname|lower|add:"_list" as urlvar %}
+        <a href="{% url urlvar %}">{{ modelname }}</a>
+        {% endwith %}</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

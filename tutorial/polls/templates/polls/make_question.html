@@ -1,0 +1,22 @@
+{% extends 'base_polls.html' %}
+
+{% block content %}
+  <form action="{% url 'polls:make_question' %}" method='post'>
+    {% csrf_token %}
+    <label for="New Question">New Question:
+    </label>
+    <input id="question_text" type="text" name="question_text" maxlength="100">
+    <br>
+    <h3>Please Add LEAST THREE CHOICES for your question!</h3>
+    <label for="choice_1">choice One:</label>
+    <input id="choice_1" type="text" name="choice_1" maxlength="100">
+    <br>
+    <label for="choice_2">choice Two:</label>
+    <input id="choice_2" type="text" name="choice_2" maxlength="100">
+    <br>
+    <label for="choice_3">choice Three:</label>
+    <input id="choice_3" type="text" name="choice_3" maxlength="100">
+    <br>
+    <input type="submit" value="CREATE">
+  </form>
+{% endblock content %}

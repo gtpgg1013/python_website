@@ -1,0 +1,37 @@
+{% extends 'base_books.html' %}
+
+{% block content %}
+  <h2>Make New Book Data</h2>
+  <form action="{% url 'books:make_record' %}" method='post'>
+    {% csrf_token %}
+    <label for="New Book title">New Book title:
+    </label>
+    <input name="book_title" type="text" id="book_title">
+    <br>
+    <label for="Author salutation">Author salutation:
+    </label>
+    <input type="text" name="author_salutation" id="author_salutation">
+    <br>
+    <label for="Author name">Author name:
+    </label>
+    <input type="text" name="author_name" id="author_name">
+    <br>
+    <label for="Author email">Author email:
+    </label>
+    <input type="text" name="author_email" id="author_email">
+    <br>
+    <label for="Publisher name">Publisher name:
+    </label>
+    <input type="text" name="publisher_name" id="publisher_name">
+    <br>
+    <label for="Publisher address">Publisher address:
+    </label>
+    <input type="text" name="publisher_address" id="publisher_address">
+    <br>
+    <label for="Publisher website">Publisher website:
+    </label>
+    <input type="text" name="publisher_website" id="publisher_website">
+    <br>
+    <input type="submit" value="CREATE">
+  </form>
+{% endblock content %}
