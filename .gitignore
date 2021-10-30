@@ -214,4 +214,7 @@ cython_debug/
 
 # Cython debug symbols
 
+# SECRET KEY
+secret_key.py
+
 # End of https://www.toptal.com/developers/gitignore/api/python,django
