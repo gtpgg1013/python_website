@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from board import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('board/', include('board.urls')),
+    path('common/', include('common.urls')),
+    path('', views.index, name='index'),
 ]
